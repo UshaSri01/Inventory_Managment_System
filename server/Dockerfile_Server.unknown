@@ -1,0 +1,6 @@
+FROM node
+COPY . /root/server
+WORKDIR /root/server
+RUN apt-get update -y &&  npm install
+CMD  npm start 
+EXPOSE 8000

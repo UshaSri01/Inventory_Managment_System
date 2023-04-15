@@ -1,0 +1,6 @@
+FROM node 
+COPY .  /root/client
+WORKDIR /root/client
+RUN apt-get update && apt-get install npm -y &&  npm install -g npm@9.6.4 -y
+CMD npm i -f & npm run dev -- --host 
+EXPOSE 4000
