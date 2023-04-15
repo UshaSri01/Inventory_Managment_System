@@ -21,7 +21,7 @@ const Login = ({ setLoginUser }) => {
     }
 
     const login = () => {
-        axios.post("http://localhost:8000/posts/login", user)
+        axios.post("http://54.234.128.175:8000/posts/login", user)
             .then(res => {
                 if(res.data.result===null){
                     alert("Credentails are not correct.")

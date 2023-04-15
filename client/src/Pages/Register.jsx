@@ -24,7 +24,7 @@ const Register = () => {
     const register = () => {
         const { name, email, password, reEnterPassword } = user
         if (name && email && password && (password === reEnterPassword)) {
-            axios.post("http://localhost:8000/posts/register", user)
+            axios.post("http://54.234.128.175:8000/posts/register", user)
                 .then(res => {
                     alert(res.data.message)
                     navigate('/')

@@ -15,7 +15,7 @@ const ProductUpdate = () => {
 
 
     const AddProductOnCLick = () => {
-        axios.patch(`http://localhost:8000/posts/updateProduct/${id}`, {name,price})
+        axios.patch(`http://54.234.128.175:8000/posts/updateProduct/${id}`, {name,price})
         alert("Product Update successfully.")
         navigate('/All_Products')
     }

@@ -40,11 +40,11 @@ const All_Product = () => {
   }, [])
 
   const getData = async () => {
-    await axios.get('http://localhost:8000/posts/getAllProducts').then((res) => { setproduct(res.data.data) });
+    await axios.get('http://54.234.128.175:8000/posts/getAllProducts').then((res) => { setproduct(res.data.data) });
   }
 
   const deleteProduct = async (id) => {
-    await axios.delete(`http://localhost:8000/posts/deleteProduct/${id}`);
+    await axios.delete(`http://54.234.128.175:8000/posts/deleteProduct/${id}`);
     getData();
     alert("product delete successfully.")
   }
@@ -72,7 +72,7 @@ const All_Product = () => {
           product.map((data) => (
             <StyledTableRow key={data._id}>
               <StyledTableCell >
-                <img src={`http://localhost:8000/${data.img}`} alt="" width={100} />
+                <img src={`http://54.234.128.175:8000/${data.img}`} alt="" width={100} />
               </StyledTableCell>
               <StyledTableCell >{data.name}</StyledTableCell>
               <StyledTableCell>{data.quantity}</StyledTableCell>

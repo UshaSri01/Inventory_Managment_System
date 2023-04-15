@@ -35,7 +35,7 @@ const Add_Product = () => {
       }
       else {
 
-        await axios.post('http://localhost:8000/posts/Create', Product,
+        await axios.post('http://54.234.128.175:8000/posts/Create', Product,
         { headers: { 'Content-Type': 'multipart/form-data' } });
 
         alert("Product add successfully");
